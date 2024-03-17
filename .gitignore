@@ -80,3 +80,8 @@ bower_components/
 # Specific files that contain sensitive information or configuration specific to your machine
 local.properties
 target
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
