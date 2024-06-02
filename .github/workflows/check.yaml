@@ -25,11 +25,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3.1.0
       - name: Build
-        run: CI=true ./gradlew clean assemble
+        run: CI=true gradle clean assemble
       - name: Test
-        run: CI=true ./gradlew test
+        run: CI=true gradle test
       - name: Integration Test
-        run: CI=true ./gradlew integrationTest
+        run: CI=true gradle integrationTest
       - name: Sonar Scan
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
@@ -37,4 +37,4 @@ jobs:
           BRANCH_NAME: ${{ env.CURRENT_BRANCH_NAME }}
         run: |
           echo "Branch name $BRANCH_NAME"
-          CI=true ./gradlew sonar --info -Dsonar.branch.name=$BRANCH_NAME
+          CI=true gradle sonar --info -Dsonar.branch.name=$BRANCH_NAME
