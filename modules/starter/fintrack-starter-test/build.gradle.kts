@@ -14,7 +14,5 @@ dependencyManagement {
 
 dependencies {
     implementation(project(":modules:starter:fintrack-starter-core"))
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-
-    testImplementation(project(":modules:starter:fintrack-starter-test"))
+    api("org.springframework.boot:spring-boot-starter-test")
 }

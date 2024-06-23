@@ -7,9 +7,10 @@
 
 rootProject.name = "fintrack"
 include(
+        ":modules:starter:fintrack-starter-test",
+        ":modules:starter:fintrack-starter-core",
         ":modules:lib:fintrack-persistence",
         ":modules:lib:fintrack-business",
-        ":modules:lib:fintrack-starter-test",
-        ":modules:fintrack-webapp",
-        ":modules:fintrack-webservice",
+        ":modules:app:fintrack-webapp",
+        ":modules:app:fintrack-webservice",
 )
